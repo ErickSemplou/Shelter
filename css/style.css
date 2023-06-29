@@ -55,17 +55,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   max-height: 823px;
   background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
 .intro__inner {
   width: 100%;
-  max-height: 673px;
+  min-height: 673px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,6 +73,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .intro__heading {
   font-family: "Georgia", sans-serif;
@@ -94,18 +97,158 @@ body {
   padding: 15px 45px;
   margin: 0 auto;
   border-radius: 100px;
-  background-color: #F1CDB3;
   font-family: "Georgia", sans-serif;
   font-size: 17px;
   line-height: 22px;
   letter-spacing: 0.06em;
   text-align: center;
-  color: #292929;
   text-decoration: none;
+  background-color: #F1CDB3;
+  color: #292929;
 }
 .intro__screen {
   width: 260px;
   height: 271px;
   background: url(../images/start-screen-puppy.png) no-repeat;
   background-size: contain;
+  position: relative;
+  left: 45px;
+  z-index: 1;
+}
+
+/* ABOUT */
+.about {
+  padding: 35px 0;
+}
+.about__inner {
+  width: 100%;
+  min-height: 890px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.about__heading {
+  font-family: "Georgia", sans-serif;
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+.about__subheading {
+  font-size: 15px;
+  line-height: 24px;
+  text-align: justify;
+  color: #4C4C4C;
+}
+.about__pets {
+  width: 260px;
+  height: 353px;
+  background: url(../images/about-pets.png) no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* PETS */
+.pets {
+  padding: 35px 0;
+  background-color: #F6F6F6;
+}
+.pets__inner {
+  width: 100%;
+  min-height: 707px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.pets__heading {
+  font-family: "Georgia", sans-serif;
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+.pets__card {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.pets__img {
+  width: 100%;
+  max-width: 270px;
+  display: block;
+  margin: 0 auto;
+}
+.pets__name {
+  margin: 25px 0;
+  font-family: "Georgia", sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+.pets__card-btn {
+  margin-top: 85px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 15px 45px;
+  margin: 0 auto;
+  border-radius: 100px;
+  font-family: "Georgia", sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-decoration: none;
+  color: #292929;
+  border: 2px solid #F1CDB3;
+}
+.pets__navigation {
+  display: inline-block;
+  margin: 0 auto;
+}
+.pets__arrow {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  margin: 0 45px;
+}
+.pets__btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 15px 45px;
+  margin: 0 auto;
+  border-radius: 100px;
+  font-family: "Georgia", sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-decoration: none;
+  background-color: #F1CDB3;
+  color: #292929;
+  margin: 15px 0;
 }

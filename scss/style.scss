@@ -3,6 +3,49 @@ $fontGeorgia: 'Georgia', sans-serif;
 
 
 /* MIXINS */
+@mixin headingTitle {
+    font-family: $fontGeorgia;
+    font-size: 25px;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+
+
+@mixin headingSubtitle {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+
+@mixin petsName {
+    font-family: $fontGeorgia;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    
+    color: #545454;
+}
+
+
+@mixin btnStyle {
+    display: inline-block;
+    vertical-align: top;
+        
+    padding: 15px 45px;
+    margin: 0 auto;
+        
+    border-radius: 100px;
+    
+    font-family: $fontGeorgia;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    
+    text-decoration: none;
+}
 
 
 /* CSS */
@@ -72,76 +115,184 @@ body {
 .intro {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     max-height: 823px;
     
     background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
     
     &__inner {
         width: 100%;
-        max-height: 673px;
+        min-height: 673px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        
         
     }
     
     &__heading {
-        font-family: $fontGeorgia;
-        font-size: 25px;
-        line-height: 32px;
-        letter-spacing: 0.06em;
-        text-align: center;
+        @include headingTitle;
         
         color: #FFFFFF;
     }
     
     &__subheading {
-        font-size: 15px;
-        line-height: 24px;
+        @include headingSubtitle;
         text-align: center;
         
         color: #CDCDCD;
     }
     
     &__btn {
-        display: inline-block;
-        vertical-align: top;
-        
-        padding: 15px 45px;
-        margin: 0 auto;
-        
-        border-radius: 100px;
+        @include btnStyle;
         
         background-color: #F1CDB3;
 
-        font-family: $fontGeorgia;
-        font-size: 17px;
-        line-height: 22px;
-        letter-spacing: 0.06em;
-        text-align: center;
-        
-        color: #292929;
-        
-        text-decoration: none;
-        
+        color: #292929; 
     }
     
     &__screen {
         width: 260px;
         height: 271px;
         background: url(../images/start-screen-puppy.png) no-repeat;
+        
         background-size: contain;
         
+        position: relative;
+        left: 45px;
         
+        z-index: 1;
     }
     
 }
 
 
+/* ABOUT */
+.about {
+    
+    padding: 35px 0;
+    
+    &__inner {
+        width: 100%;
+        min-height: 890px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    &__heading {
+        @include headingTitle;
+        
+        color: #545454;
+    }
+    
+    &__subheading {
+        @include headingSubtitle;
+        
+        text-align: justify;
+        
+        color: #4C4C4C;
+    }
+    
+    &__pets {
+        width: 260px;
+        height: 353px;
+        background: url(../images/about-pets.png) no-repeat;
+        
+        background-size: contain;
+        
+        margin: 0 auto;
+        
+        z-index: 1;
+    }
+    
+}
 
+
+/* PETS */
+.pets {
+    padding: 35px 0;
+    
+    background-color: #F6F6F6;
+
+    &__inner {
+        width: 100%;
+        min-height: 707px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    &__heading {
+        @include headingTitle;
+    
+        color: #545454;
+    }
+    
+    &__card {
+        padding: 20px 0;
+        
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__img {
+        width: 100%;
+        max-width: 270px;
+        
+        display: block;
+        
+        margin: 0 auto;
+    }
+    
+    &__name {
+        margin: 25px 0;
+        
+        @include petsName;
+    }
+    
+    &__card-btn {
+        margin-top: 85px;
+        
+        @include btnStyle;
+        
+        color: #292929;
+        
+        border: 2px solid #F1CDB3;
+    }
+    
+    &__navigation {
+        display: inline-block;
+        
+        margin: 0 auto;
+    }
+    
+    &__arrow {
+        width: 52px;
+        height: 52px;
+
+        border: 2px solid #F1CDB3;
+        border-radius: 100px;
+        
+        margin: 0 45px;
+    }
+    
+    &__btn {
+        @include btnStyle;
+        
+        background-color: #F1CDB3;
+
+        color: #292929;
+        
+        margin: 15px 0;
+    }
+    
+}
 
 
 
