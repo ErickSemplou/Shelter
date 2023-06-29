@@ -83,6 +83,7 @@ body {
   line-height: 32px;
   letter-spacing: 0.06em;
   text-align: center;
+  color: #545454;
   color: #FFFFFF;
 }
 .intro__subheading {
@@ -251,4 +252,34 @@ body {
   background-color: #F1CDB3;
   color: #292929;
   margin: 10px 0;
+}
+
+/* HELP */
+.help {
+  padding: 35px 0;
+}
+.help__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 35px;
+}
+.help__heading {
+  font-family: "Georgia", sans-serif;
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+.help__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
