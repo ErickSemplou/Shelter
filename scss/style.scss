@@ -50,6 +50,17 @@ $fontGeorgia: 'Georgia', sans-serif;
 }
 
 
+@mixin listParagraf {
+    font-family: $fontGeorgia;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    text-align: center;
+        
+    color: #545454;
+}
+
+
 /* CSS */
 *,
 *:after, 
@@ -110,7 +121,6 @@ body {
     }
     
 }
-
 
 
 /* INTRO */
@@ -306,19 +316,123 @@ body {
     
     &__heading {
         @include headingTitle;
+        
+        margin-bottom: 45px;
     }
     
     &__list {
         display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    &__item {
+        width: 100%;
+        min-width: 130px;
+        
+        flex: 1 1 0;
+        
+        padding: 10px;
+        margin: 10px 5px;
+    }
+    
+    &__icon {
+        display: block;
+        width: 100%;
+        max-width: 50px;
+        margin: 0 auto;
+    }
+    
+    &__paragraf {
+        @include listParagraf;
+        
+        padding-top: 15px;
     }
     
 }
 
 
+/* DONATION */
+.donation {
+    background-color: #F6F6F6;
+    
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__text {
+        min-height: 281px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    &__heading {
+        @include headingTitle;
+    }
+    
+    &__subheading {
+        @include headingSubtitle;
+        
+        color: #545454;
+    }
+    
+    &__credit {
+        display: flex;
+        
+        padding: 10px 15px;
+        
+        background-color: #F1CDB3;
+        
+        border-radius: 9px;
+    }
+    
+    &__card {
+        display: block;
+        width: 100%;
+        max-width: 30px;
+    }
+    
+    &__number {
+        @include listParagraf;
+        
+        align-self: center;
+        
+        margin-left: 25px;
+    }
+    
+    &__paragraf {
+        font-family: 'Arial';
+        font-size: 12px;
+        font-style: italic;
+        line-height: 18px;
+        text-align: justify;
+        
+        color: #B2B2B2;
+    }
+    
+    &__img {
+        margin: 40px auto;
+    }
+    
+    &__dog {
+        display: block;
+        width: 100%;
+        max-width: 260px;
+    }
+    
+    
+}
 
 
-
+/* FOOTER */
+.footer {
+    
+    &__inner {
+        
+    }
+}
 
 
 
