@@ -10,7 +10,7 @@
 
 <body>
    
-   
+   <div class="page">
    <!-- HEADER -->
    <div class="header">
        <div class="header__inner">
@@ -20,7 +20,12 @@
                <div class="header__subtitle">Shelter for pets in Boston</div>
            </div>
            
-           
+           <nav class="nav">
+               <a href="#" class="nav__link">About the shelter</a>
+               <a href="#" class="nav__link">Our pets</a>
+               <a href="#" class="nav__link">Help the shelter</a>
+               <a href="#" class="nav__link">Contacts</a>
+           </nav>
            
        </div>
    </div>
@@ -32,6 +37,7 @@
        <div class="container">
            <div class="intro__inner">
              
+              <div class="intro__content">
               <h2 class="intro__heading">
                   Not only people
                   <br> 
@@ -42,6 +48,7 @@
               </p>
               
                <a href="#" class="intro__btn">Make a friend</a>
+               </div>
                
                <div class="intro__screen"></div>
                
@@ -65,6 +72,7 @@
                  <p class="about__subheading">
                      Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.
                  </p>
+                 <br>
                  <p class="about__subheading">
                      We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.
                  </p>
@@ -91,14 +99,29 @@
                 </h2>
             </div>
             
-            <div class="pets__card">
-                    
-                <img src="images/pets/pets-katrine.png" alt="cat" class="pets__img">
-                <h3 class="pets__name">Katrine</h3>
-                    
-                <a href="#" class="pets__card-btn">Learn more</a>
-                    
+            <!-- SLIDER -->
+            <div class="pets__slider">
+               
+                <div class="pets__card pets__card-1">
+
+                    <img src="images/pets/pets-katrine.png" alt="cat" class="pets__img">
+                    <h3 class="pets__name">Katrine</h3>
+
+                    <a href="#" class="pets__card-btn">Learn more</a>
+
+                </div>
+
+                <div class="pets__card pets__card-2">
+
+                    <img src="images/pets/pets-jennifer.png" alt="dog" class="pets__img">
+                    <h3 class="pets__name">Jennifer</h3>
+
+                    <a href="#" class="pets__card-btn">Learn more</a>
+
+                </div>
+            
             </div>
+            <!-- SLIDER -->
             
             <div class="pets__navigation">
                 <button class="pets__arrow">&larr;</button>
@@ -187,6 +210,7 @@
            </div>
        </div>
    </section>
+   <!-- HELP -->
    
    
    <!-- DONATION -->
@@ -223,6 +247,7 @@
            </div>
        </div>
    </section>
+   <!-- DONATION -->
    
    
    <!-- FOOTER -->
@@ -230,9 +255,52 @@
        <div class="container">
            <div class="footer__inner">
                
+               <div class="footer__contacts">
+                   <h2 class="footer__heading">
+                       For questions and suggestions
+                   </h2>
+                   
+                   <div class="footer__mail">
+                       <img src="images/icon/icon-email.png" alt="email" class="footer__letter">
+                       <p class="footer__account">email@shelter.com</p>
+                   </div>
+                   
+                   <div class="footer__phone">
+                       <img src="images/icon/icon-phone.png" alt="phone" class="footer__icon-phone">
+                       <p class="footer__number">+13 674 567 75 54</p>
+                   </div>
+               </div>
+               
+               <div class="footer__location">
+                   <h2 class="footer__heading">
+                       We are waiting for your visit
+                   </h2>
+                   
+                   <div class="footer__city">
+                       <img src="images/icon/icon-marker.png" alt="marker" class="footer__marker">
+                       <p class="footer__boston">
+                       1 Central Street, Boston (entrance from the store)
+                       </p>
+                   </div>
+                   
+                   <div class="footer__city">
+                       <img src="images/icon/icon-marker.png" alt="marker" class="footer__marker">
+                       <p class="footer__london">
+                       18 South Park, London 
+                       </p>
+                   </div>
+               </div>
+               
+               
+               
            </div>
+           
+           <div class="footer__screen"></div>
+           
        </div>
    </footer>
+   <!-- FOOTER -->
+   </div>
   
    
     

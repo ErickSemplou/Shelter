@@ -61,6 +61,18 @@ $fontGeorgia: 'Georgia', sans-serif;
 }
 
 
+@mixin footerParagraf {
+    font-family: $fontGeorgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: left;
+
+    color: #F1CDB3;
+}
+
+
 /* CSS */
 *,
 *:after, 
@@ -76,6 +88,15 @@ $fontGeorgia: 'Georgia', sans-serif;
 body {
     font-family: 'Arial', sans-serif;
     font-weight: 400;
+}
+
+
+/* PAGE */
+.page {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 
@@ -98,7 +119,9 @@ body {
     z-index: 1000;
     
     &__inner {
+        display: flex;
         
+        align-content: center;
     }
     
     &__title {
@@ -123,6 +146,12 @@ body {
 }
 
 
+/* NAV */
+.nav {
+    display: none;
+}
+
+
 /* INTRO */
 .intro {
     display: flex;
@@ -140,9 +169,7 @@ body {
         min-height: 673px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        
-        
+        justify-content: space-between;  
     }
     
     &__heading {
@@ -185,11 +212,11 @@ body {
 /* ABOUT */
 .about {
     
-    padding: 35px 0;
+    padding: 45px 0;
     
     &__inner {
         width: 100%;
-        min-height: 890px;
+        height: 890px;
         
         display: flex;
         flex-direction: column;
@@ -198,6 +225,8 @@ body {
     
     &__heading {
         @include headingTitle;
+        
+        margin-bottom: 45px;
     }
     
     &__subheading {
@@ -242,12 +271,23 @@ body {
         @include headingTitle;
     }
     
+    &__slider {
+        display: flex;
+    }
+    
     &__card {
         padding: 20px 0;
-        
+    }
+    
+    &__card-1 {
         display: flex;
         flex-direction: column;
     }
+    
+    &__card-2 {
+        display: none;
+    }
+    
     
     &__img {
         width: 100%;
@@ -275,7 +315,8 @@ body {
     }
     
     &__navigation {
-        display: inline-block;
+        display: flex;
+        justify-content: space-between;
         
         margin: 0 auto;
     }
@@ -355,6 +396,8 @@ body {
 .donation {
     background-color: #F6F6F6;
     
+    padding-top: 35px;
+    
     &__inner {
         display: flex;
         flex-direction: column;
@@ -428,11 +471,388 @@ body {
 
 /* FOOTER */
 .footer {
+        background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+        
+        padding: 35px 0 0;
     
     &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__contacts {
+        margin-bottom: 45px;
+    }
+    
+    &__heading {
+        @include headingTitle;
         
+        color: #FFFFFF;
+    }
+    
+    &__mail {
+        display: flex;
+        justify-content: center;
+        
+        margin: 25px 0; 
+    }
+    
+    &__letter {
+        display: block;
+        width: 100%;
+        
+        max-width: 40px;
+        
+        padding-right: 15px;
+    }
+    
+    &__account {
+        @include footerParagraf;
+        
+        align-self: center;
+    }
+    
+    &__phone {
+        display: flex;
+        justify-content: center;
+    }
+    
+    &__icon-phone {
+        display: block;
+        width: 100%;
+        
+        max-width: 40px;
+        
+        padding-right: 15px;
+    }
+    
+    &__number {
+        @include footerParagraf;
+        
+        align-self: center;
+    }
+    
+    &__location {
+        margin-bottom: 15px;
+    }
+    
+    &__city {
+        display: flex;
+        
+        margin: 25px 0;  
+    }
+    
+    &__marker {
+        display: block;
+        width: 100%;
+        height: 100%;
+        
+        max-width: 22px;
+        max-height: 32px;
+        
+        margin-right: 15px;
+    }
+    
+    &__boston {
+        @include footerParagraf;
+    }
+    
+    &__london {
+        @include footerParagraf;
+    }
+    
+    &__screen {
+        width: 260px;
+        height: 269px;
+        background: url(../images/footer-puppy.png) no-repeat;
+        
+        background-size: contain;
+        
+        margin: 0 auto;
+        
+        z-index: 1;
     }
 }
+
+
+
+/* MEDIA 768 */
+@media screen and (min-width: 768px) {
+    
+    /* CONTAINER */
+    .container {
+        max-width: 708px;
+    }
+    
+    
+    /* HEADER */
+    .container {
+        
+    }
+    
+    
+    /* NAV */
+    .nav {
+        display: inline-flex;
+        align-self: center;
+        
+        &__link {
+            font-size: 15px;
+            line-height: 24px;
+            
+            color: #CDCDCD;
+            
+            text-decoration: none;
+            
+            border: 2px solid transparent;
+            
+            margin-left: 45px;
+            
+            &:hover {
+                color: #FAFAFA;
+                
+                border-bottom: 2px solid #F1CDB3;
+;
+                transition: linear .4s;
+            }
+        }
+    }
+    
+    
+    /* HEADER */
+    .header {
+        
+        .header__inner {
+            justify-content: space-between;
+        }
+    }
+    
+    
+    /* INTRO */
+    .intro {
+        max-height: 1165px;
+        height: 175vh;
+        
+        .container {
+            max-width: 569px;
+        }
+        
+        &__inner {
+            align-items: flex-start;
+            min-height: 1015px;
+            
+            padding: 0 35px;
+        }
+        
+        &__heading {
+            font-size: 44px;
+            line-height: 57px;
+            text-align: left;
+        }
+    
+        &__subheading {
+            text-align: left;
+        }
+        
+        &__screen {
+            width: 569px;
+            height: 593px;
+
+            background-size: contain;
+
+            position: relative;
+            left: 45px;
+
+            z-index: 1;
+        }
+    }
+    
+    
+    /* ABOUT */
+    .about {
+        
+        .container {
+            max-width: 437px;
+        }
+        
+        &__inner {
+            max-height: 868px;
+        }
+        
+        &__heading {
+            font-size: 35px;
+            line-height: 45px;
+        }
+
+        &__pets {
+            width: 300px;
+            height: 408px;
+        }
+    }
+    
+    
+    /* PETS */
+    .pets {
+        padding: 75px 0;
+        
+        &__inner {
+            min-height: 697px;
+        }
+        
+        &__slider {
+            display: flex;
+            justify-content: center;
+        }
+        
+        &__card {
+            margin: 0 25px;
+        }
+        
+        &__card-2 {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        &__navigation {
+            margin: 0 -65px;
+            
+            position: relative;
+            bottom: 250px;
+        }
+        
+        &__btn {
+            min-width: 260px;
+            margin: 0 auto;
+        }
+        
+    }
+    
+    
+    /* HELP */
+    .help {
+        padding: 75px 0;
+        
+        .container {
+            max-width: 630px;
+        }
+        
+        &__item {
+            padding: 20px;
+            margin: 15px 30px;
+        }
+    }
+    
+    
+    /* DONATION */
+    .donation {
+        padding: 75px 0;
+        
+        &__text {
+            max-width: 380px;
+            
+            margin: 0 auto;
+        }
+        
+        &__heading {
+            font-size: 35px;
+            line-height: 45px;
+            
+            text-align: left;
+        }
+        
+        &__dog {
+            max-width: 505px;
+        }
+    }
+    
+    
+    /* FOOTER*/
+    .footer {
+        
+        &__inner {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        &__screen {
+            width: 300px;
+            height: 310px;
+        }
+    }
+    
+}
+
+
+/* MEDIA 1280 */
+@media screen and (min-width: 1280px) {
+    
+    /* CONTAINER */
+    .container {
+        max-width: 1200px;
+    }
+    
+    .intro {
+        
+        .container {
+            max-width: 1200px;
+        }
+        
+        &__inner {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
