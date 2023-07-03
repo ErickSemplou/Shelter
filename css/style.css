@@ -98,9 +98,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .intro__heading {
   font-family: "Georgia", sans-serif;
@@ -116,9 +115,12 @@ body {
   line-height: 24px;
   text-align: center;
   color: #CDCDCD;
+  margin: 55px 0;
 }
 .intro__btn {
-  display: inline-block;
+  width: 100%;
+  max-width: 207px;
+  display: block;
   vertical-align: top;
   padding: 15px 45px;
   margin: 0 auto;
@@ -248,7 +250,7 @@ body {
 }
 .pets__card-btn {
   margin-top: 85px;
-  display: inline-block;
+  display: block;
   vertical-align: top;
   padding: 15px 45px;
   margin: 0 auto;
@@ -279,7 +281,7 @@ body {
   margin: 0 45px;
 }
 .pets__btn {
-  display: inline-block;
+  display: block;
   vertical-align: top;
   padding: 15px 45px;
   margin: 0 auto;
@@ -606,6 +608,9 @@ body {
     min-height: 1015px;
     padding: 0 35px;
   }
+  .intro__content {
+    margin-bottom: 75px;
+  }
   .intro__heading {
     font-size: 44px;
     line-height: 57px;
@@ -617,8 +622,6 @@ body {
   .intro__screen {
     width: 569px;
     height: 593px;
-    background-size: contain;
-    position: relative;
     left: 45px;
     z-index: 1;
   }
@@ -721,6 +724,9 @@ body {
   .container {
     max-width: 1200px;
   }
+  .intro {
+    max-height: 908px;
+  }
   .intro .container {
     max-width: 1200px;
   }
@@ -729,8 +735,18 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    padding: 0;
+  }
+  .intro__content {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .intro__screen {
+    width: 698px;
+    height: 728px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }

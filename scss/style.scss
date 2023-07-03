@@ -32,7 +32,7 @@ $fontGeorgia: 'Georgia', sans-serif;
 
 
 @mixin btnStyle {
-    display: inline-block;
+    display: block;
     vertical-align: top;
         
     padding: 15px 45px;
@@ -169,7 +169,11 @@ body {
         min-height: 673px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;  
+        justify-content: space-around;  
+    }
+    
+    &__content {
+        
     }
     
     &__heading {
@@ -183,14 +187,18 @@ body {
         text-align: center;
         
         color: #CDCDCD;
+        
+        margin: 55px 0;
     }
     
     &__btn {
+        width: 100%;
+        max-width: 207px;
         @include btnStyle;
         
         background-color: #F1CDB3;
 
-        color: #292929; 
+        color: #292929;
     }
     
     &__screen {
@@ -644,6 +652,10 @@ body {
             padding: 0 35px;
         }
         
+        &__content {
+            margin-bottom: 75px;
+        }
+        
         &__heading {
             font-size: 44px;
             line-height: 57px;
@@ -658,9 +670,6 @@ body {
             width: 569px;
             height: 593px;
 
-            background-size: contain;
-
-            position: relative;
             left: 45px;
 
             z-index: 1;
@@ -792,14 +801,27 @@ body {
     }
     
     .intro {
-        
+        max-height: 908px;
         .container {
             max-width: 1200px;
         }
         
         &__inner {
             flex-direction: row;
-            justify-content: space-between;
+            
+            padding: 0;
+        }
+        
+        &__content {
+            flex-basis: 40%;
+            align-self: flex-end;
+        }
+        
+        &__screen {
+            width: 698px;
+            height: 728px;
+        
+            align-self: flex-end;
         }
     }
 }
