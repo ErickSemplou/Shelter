@@ -121,6 +121,10 @@ body {
         display: none;
     }
     
+    &__card-1280 {
+        display: none;
+    }
+    
     &__img {
         width: 100%;
         max-width: 270px;
@@ -391,7 +395,41 @@ body {
 }
 
 
-
+@media screen and (min-width: 1280px) {
+    /* CONTAINER */
+    .container {
+        max-width: 1200px;
+    }
+    
+    
+    /* PETS */
+    .pets {
+        
+        &__item {
+            max-width: 1200px;
+        }
+        
+        &__card-1280 {
+            display: block;
+        }
+    }
+    
+    
+     /* FOOTER */
+    .footer {
+        
+        &__inner {
+            flex-wrap: nowrap;
+        }
+        
+        &__contacts,
+        &__location {
+            margin-bottom: 0;
+        }
+        
+    }
+    
+}
 
 
 

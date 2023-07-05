@@ -113,6 +113,9 @@ body {
 .pets__card-768 {
   display: none;
 }
+.pets__card-1280 {
+  display: none;
+}
 .pets__img {
   width: 100%;
   max-width: 270px;
@@ -377,5 +380,26 @@ body {
   .footer__screen {
     width: 300px;
     height: 310px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  /* CONTAINER */
+  .container {
+    max-width: 1200px;
+  }
+  /* PETS */
+  .pets__item {
+    max-width: 1200px;
+  }
+  .pets__card-1280 {
+    display: block;
+  }
+  /* FOOTER */
+  .footer__inner {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .footer__contacts, .footer__location {
+    margin-bottom: 0;
   }
 }
