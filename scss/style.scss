@@ -53,8 +53,12 @@ body {
     
     &__inner {
         display: flex;
-        
         align-content: center;
+    }
+    
+    &__logo {
+        width: 100%;
+        max-width: 200px;
     }
     
     &__title {
@@ -78,14 +82,62 @@ body {
     
 }
 
+.header--fixed {
+    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+    
+    position: fixed;
+    top: 0;
+    right: 0px;
+    left: 0;
+    
+    padding: 0 0 10px 20px;
+    
+    transform: translate3d(0, 0, 0);
+}
+
 
 /* NAV */
 .nav {
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 103%;
+    height: auto;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    
+    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
     
     &__link {
-       
+        
+        padding: 25px 15px;
+        margin: 0 auto;
+        
+        font-size: 15px;
+        line-height: 24px;
+            
+        color: #CDCDCD;
+            
+        text-decoration: none;
+            
+        border: 2px solid transparent;
+        
+        &:hover {
+                color: #FAFAFA;
+                
+                border-bottom: 2px solid #F1CDB3;
+                
+                transition: linear .4s;
+        }
     }
+}
+
+.nav.active {
+    display: flex;
 }
 
 
@@ -103,7 +155,9 @@ body {
     
     position: absolute;
     top: 15px;
-    right: 0px;
+    right: 0;
+    
+    cursor: pointer;
     
     z-index: 1;
     
@@ -116,11 +170,13 @@ body {
         
         position: absolute;
         top: 0;
-        right: 0;
+        right: 0px;
         bottom: 0;
         left: 0;
         
         margin: auto;
+        
+        transition: linear .5s;
         
         &:before,
         &:after {
@@ -146,6 +202,11 @@ body {
     }
 }
 
+.nav__toggle.active .nav__toggle-item {
+    transform: rotate(90deg);
+    transition: linear .5s;
+}
+
 
 /* INTRO */
 .intro {
@@ -161,14 +222,14 @@ body {
     
     &__inner {
         width: 100%;
-        min-height: 673px;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-around;  
     }
     
     &__content {
-        
+        margin-bottom: 70px;
     }
     
     &__heading {
@@ -601,29 +662,24 @@ body {
     
     /* NAV */
     .nav {
-        display: inline-flex;
+        display: flex;
+        flex-direction: row;
         align-self: center;
         
+        
+        position: static;
+        
+        background: none;
         &__link {
-            font-size: 15px;
-            line-height: 24px;
+            display: inline-flex;
+            padding: 0;
+            margin-right: 0;
             
-            color: #CDCDCD;
-            
-            text-decoration: none;
-            
-            border: 2px solid transparent;
-            
-            margin-left: 45px;
-            
-            &:hover {
-                color: #FAFAFA;
-                
-                border-bottom: 2px solid #F1CDB3;
-                
-                transition: linear .4s;
-            }
         }
+    }
+    
+    .nav__burger {
+        display: none;
     }
     
     /* BURGER */
