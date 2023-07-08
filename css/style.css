@@ -71,13 +71,13 @@ body {
   color: #FFFFFF;
 }
 
-.header--fixed {
+.header.fixed {
   background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   position: fixed;
   top: 0;
-  right: 0px;
+  right: 0;
   left: 0;
-  padding: 0 0 10px 20px;
+  padding: 0 20px 10px 20px;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
