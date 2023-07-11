@@ -26,43 +26,6 @@ menu.addEventListener("click", function() {
 });
 
 
-/* FIXED HEADER */
-
-window.addEventListener('scroll', function() {
-  let header = document.querySelector('.header'); // Вибираємо заголовок (header) сайту
-  let scrollPosition = window.scrollY; // Отримуємо позицію прокрутки
-  let windowHeight = window.innerHeight; // Отримуємо висоту вікна браузера
-
-  if (scrollPosition > windowHeight) {
-    header.classList.add('fixed'); // Додаємо клас "fixed" до заголовку, щоб його зафіксувати
-  } else {
-    header.classList.remove('fixed'); // Видаляємо клас "fixed" з заголовку, щоб його розфіксувати
-  }
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  let header = document.querySelector('.header');
-  let navToggle = document.querySelector('.nav__toggle');
-
-  // Функція для перевірки стану класу `fixed` у елемента `.header`
-  function checkHeaderFixed() {
-    if (header.classList.contains('fixed')) {
-      navToggle.style.marginRight = '20px'; 
-        
-    } else {
-      navToggle.style.marginRight = ''; 
-    }
-  }
-
-  // Викликати функцію перевірки при завантаженні сторінки
-  checkHeaderFixed();
-
-  // Викликати функцію перевірки при прокрутці сторінки
-  window.addEventListener('scroll', checkHeaderFixed);
-});
-
-
 /* SCROLL NAVIGATION */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -90,7 +53,7 @@ const prevButton = document.getElementById('leftButton');
 const nextButton = document.getElementById('rightButton');
 
 let currentIndex = 0;
-const itemsPerPage = [1, 2, 3]; // Кількість слайдів на кожній розмірності екрану
+const itemsPerPage = [3, 6, 8]; // Кількість слайдів на кожній розмірності екрану
 
 function showSlide() {
   for (let i = 0; i < sliderCards.length; i++) {
@@ -178,6 +141,16 @@ document.addEventListener('click', function(event) {
     document.body.style.overflow = 'auto';
   }
 });
+
+
+
+
+
+
+
+
+
+
 
 
 

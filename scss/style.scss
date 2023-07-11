@@ -93,6 +93,8 @@ body {
     padding: 0 20px 10px 20px;
     
     transform: translate3d(0, 0, 0);
+    
+    opacity: .9;
 }
 
 
@@ -127,12 +129,13 @@ body {
         border: 2px solid transparent;
         
         &:hover {
-                color: #FAFAFA;
+            color: #FAFAFA;
                 
-                border-bottom: 2px solid #F1CDB3;
+            border-bottom: 2px solid #F1CDB3;
                 
-                transition: linear .4s;
+            transition: linear .4s;
         }
+        
     }
 }
 
@@ -344,19 +347,6 @@ body {
         margin: 0 auto;
     }
     
-    &__card-1 {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    &__card-2 {
-        display: none;
-    }
-    
-    &__card-3 {
-        display: none;
-    }
-    
     &__img {
         width: 100%;
         max-width: 270px;
@@ -397,6 +387,8 @@ body {
         border-radius: 100px;
         
         margin: 0 50px;
+        
+        cursor: pointer;
     }
     
     &__btn {
@@ -408,9 +400,83 @@ body {
         
         margin: 10px 0;
     }
-    
 }
 
+
+/* MODAL */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+        
+    width: 100%;
+    height: 100vh;
+    
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+    overflow: auto;
+    
+    background-color: rgba(0,0,0,.3);
+        
+    z-index: 999;
+    
+    visibility: hidden;
+    opacity: 0;
+    
+    transition: opacity .4s, visibility .4s;
+    
+    
+    &__card {
+        width: 240px;
+        max-width: 900px;
+        
+        padding: 20px 10px 15px;
+        
+        background-color: #FFFFFF;
+        
+        z-index: 1;
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        min-height: 280px;
+        
+        text-align: center;
+    }
+    
+    &__name {
+        font-family: $fontGeorgia;
+        font-size: 35px;
+        line-height: 45px;
+        letter-spacing: 0.06em;
+    }
+    
+    &__species {
+        font-family: $fontGeorgia;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+    }
+    
+    &__character {
+        font-family: $fontGeorgia;
+        font-size: 13px;
+        line-height: 14px;
+        letter-spacing: 0.06em;
+        text-align: justify;
+    }
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+    
 
 /* HELP */
 .help {
@@ -669,6 +735,7 @@ body {
         position: static;
         
         background: none;
+        
         &__link {
             display: inline-flex;
             padding: 0;
@@ -782,11 +849,6 @@ body {
             margin: 0 25px;
         }
         
-        &__card-2 {
-            display: flex;
-            flex-direction: column;
-        }
-        
         &__navigation {
             margin: 0 -65px;
             
@@ -799,6 +861,14 @@ body {
             margin: 0 auto;
         }
         
+    }
+    
+    
+    /* MODAL */
+    .modal {
+        &__card {
+            width: 630px;
+        }
     }
     
     
@@ -939,11 +1009,6 @@ body {
     
     /* PETS */
     .pets {
-        
-        &__card-3 {
-            display: flex;
-            flex-direction: column;
-        }
         
         &__btn {
             margin-top: -50px;
